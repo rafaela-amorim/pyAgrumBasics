@@ -1,5 +1,9 @@
-Creating your first Bayesian Network with pyAgrum
- * http://www-desir.lip6.fr/~phw/aGrUM/docs/last/notebooks/01-tutorial.ipynb.html
+<h4>Creating your first Bayesian Network with pyAgrum</h4>
+<ul>
+  <li>http://www-desir.lip6.fr/~phw/aGrUM/docs/last/notebooks/01-tutorial.ipynb.html</li>
+ </ul>
 
-GitLab repository of PyAgrum:
- * https://gitlab.com/agrumery/aGrUM
+<h4>GitLab repository of PyAgrum:</h4>
+<ul>
+  <li>https://gitlab.com/agrumery/aGrUM</li>
+</ul>
