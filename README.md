@@ -1,3 +1,5 @@
 # pyAgrumBasics
-Library for causality - for tests
-You must use python3
+<p> Python library for causality</p>
+<p> tests only </p>
+<p></p>
+<h5>You must use python3</h5>
