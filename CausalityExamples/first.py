@@ -20,6 +20,7 @@ bn.cpt('z')[{'w':1, 'x':1}] = [0.5, 0.5]
 bn.cpt('y')[:] = [0.1, 0.9], [0.8, 0.2]
 
 
+
 # **** Causal model plot ****
 
 # d is a causal model! It receives a bayesian network and the unmeasured variables in it along
