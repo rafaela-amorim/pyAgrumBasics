@@ -8,6 +8,11 @@
   <li>http://www-desir.lip6.fr/~phw/aGrUM/docs/last/notebooks/01-tutorial.ipynb.html</li>
  </ul>
 
+<h4>PyAgrum Causal Documentation</h4>
+<ul>
+  <li>https://pyagrum.readthedocs.io/en/latest/Causal.html</li>
+</ul>
+
 <h4>GitLab repository of PyAgrum:</h4>
 <ul>
   <li>https://gitlab.com/agrumery/aGrUM</li>
