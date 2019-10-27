@@ -1,5 +1,4 @@
 <h1>Interesting Links!</h1>
-<hr>
 
 <h4>Causality Examples notebook</h4>
 <ul>
