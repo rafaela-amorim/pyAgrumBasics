@@ -10,29 +10,31 @@ import pyAgrum.causal.notebook as cslnb
 # Smoking causes cancer?
 
 # s is smoking, t is tar deposits, c is lung cancer
-bn = gum.fastBN("s->t->c")
+bn = gum.fastBN("smoking->tar->cancer")
 
 # conditional probabilities table
-bn.cpt('s')[:] = [0.5, 0.5]
+bn.cpt('smoking')[:] = [0.5, 0.5]
 
-bn.cpt('t')[{'s':0}] = [380/400, 20/400]
-bn.cpt('t')[{'s':1}] = [20/400, 380/400]
+bn.cpt('tar')[{'smoking':0}] = [380/400, 20/400]
+bn.cpt('tar')[{'smoking':1}] = [20/400, 380/400]
 
-bn.cpt('c')[{'s':0, 't':0}] = [38/380, 342/380]
-bn.cpt('c')[{'s':0, 't':1}] = [1/20, 19/20]
-bn.cpt('c')[{'s':1, 't':0}] = [18/20, 2/20]
-bn.cpt('c')[{'s':1, 't':1}] = [323/380, 57/380]
+bn.cpt('cancer')[{'smoking':0, 'tar':0}] = [38/380, 342/380]
+bn.cpt('cancer')[{'smoking':0, 'tar':1}] = [1/20, 19/20]
+bn.cpt('cancer')[{'smoking':1, 'tar':0}] = [18/20, 2/20]
+bn.cpt('cancer')[{'smoking':1, 'tar':1}] = [323/380, 57/380]
 
 # bn
-# bn.cpt('c')
+# bn.cpt('cancer')
 
 # Causal Model
 
-# g is genes
-d = csl.CausalModel(bn, [('g', ['s', 'c'])])
+d = csl.CausalModel(bn, [('genes', ['smoking', 'cancer'])])
 
-cslnb.showCausalImpact(d, 'c', 's', values={'s':1})
-cslnb.showCausalImpact(d, 'c', 's', values={'s':0})
+cslnb.showCausalImpact(d, 'cancer', 'smoking', values={'smoking':1})
+cslnb.showCausalImpact(d, 'cancer', 'smoking', values={'smoking':0})
 
-do_s0 = csl.causalImpact(d, 'c', 's', '', {'s':0})
-do_s1 = csl.causalImpact(d, 'c', 's', '', {'s':1})
+
+# ci = csl.causalImpact(d, "cancer", "smoking", "", {'smoking': 1})
+# display(Math(ci.toLatex()))
+
+do = csl.doCalculusWithObservation (d, "cancer", "smoking", )
